@@ -5,7 +5,7 @@ export async function getLink(id) {
   return axios({
     baseURL: "https://server.xhhzs.cn",
     url: "/song/url",
-    method: "get",
+    method: "post",
     params: {
       id,cookie
     }

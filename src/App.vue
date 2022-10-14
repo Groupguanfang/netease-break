@@ -25,11 +25,30 @@ export default {
 
 <template>
   <div class="root">
-    <input v-model="id" placeholder="请输入音乐id"/>
-    <button @click="action">获取下载链接</button>
+  <div class="row">
+      <input v-model="id" placeholder="请输入音乐id"/>
+      <button @click="action">></button>
+    </div>
     <a :href="url"><button :disabled="disabled">{{ buttonText }}</button></a>
   </div>
 </template>
 
 <style scoped>
+input {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  font-size: 1em;
+  transition: border-color 0.25s;
+}
+input:focus {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+a {
+  width: 100%;
+}
+.row {
+  display: flex;
+}
 </style>
