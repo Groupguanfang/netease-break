@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-
-createApp(App).mount('#app')
+import { createApp } from "vue";
+import App from "./App.vue";
+import Varlet from "@varlet/ui";
+import "@varlet/ui/es/style.js";
+import "./common.css";
+Varlet.StyleProvider(Varlet.Themes.dark);
+createApp(App).use(Varlet).mount("#app");
